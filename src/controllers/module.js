@@ -9,6 +9,8 @@ module.exports = {
       return res.json('Sem actions')
     }
 
+    console.log(actions)
+
     actions.map(async (item) => {
       data.push( {
         Url: `http://blynk-cloud.com/${process.env.TOKEN_BLYNK}/update/${item.pin_name}`,
